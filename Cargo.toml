@@ -1,0 +1,22 @@
+[package]
+name = "zippers"
+authors = ["Jean Arhancet"]
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi = "2.5.0"
+napi-derive = "2.5.0"
+ignore = "0.4.18"
+zip = "0.6.2"
+num_cpus = "1.0"
+crossbeam-channel = "0.5"
+
+[target.'cfg(all(target_arch = "x86_64", not(target_env = "musl")))'.dependencies]
+mimalloc = {version = "0.1"}
+
+[build-dependencies]
+napi-build = "2"

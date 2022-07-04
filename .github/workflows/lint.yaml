@@ -1,0 +1,40 @@
+
+
+name: Lint
+
+on:
+  push:
+    branches:
+      - main
+    tags-ignore:
+      - '**'
+  pull_request:
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 12
+
+      - name: Install
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+          override: true
+          components: rustfmt, clippy
+
+      - name: 'Install dependencies'
+        run: npm install
+        
+      - name: ESLint
+        run: npm run lint:js
+
+      - name: Cargo Clippy
+        run: npm run lint:rs

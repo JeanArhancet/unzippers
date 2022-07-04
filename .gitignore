@@ -1,0 +1,18 @@
+target/
+
+.idea/
+
+Cargo.lock
+
+.DS_Store
+
+node_modules/
+
+# include only js and zip files
+/benches/*
+!/benches/*.js
+!/benches/*.zip
+
+*.node
+
+.vscode
