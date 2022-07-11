@@ -1,7 +1,6 @@
+import chalk from 'chalk'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-
-import chalk from 'chalk'
 import prettyBytes from 'pretty-bytes'
 import { table } from 'table'
 
@@ -45,14 +44,10 @@ async function detect(job) {
 }
 
 async function memoryLeakDetect() {
-  try {
-    console.info(chalk.green('Zip file...'))
-    await detect(async () => zip(path.resolve(__dirname, 'node_modules')))
-    console.info(chalk.green('Unzip file...'))
-    await detect(async () => unzip(path.resolve(__dirname, 'node_modules.zip')))
-  } catch (e) {
-    return e
-  }
+  console.info(chalk.green('Zip file...'))
+  await detect(async () => zip(path.resolve(__dirname, 'node_modules')))
+  console.info(chalk.green('Unzip file...'))
+  await detect(async () => unzip(path.resolve(__dirname, 'node_modules.zip')))
 }
 
 memoryLeakDetect().catch((err) => chalk.red(err))
