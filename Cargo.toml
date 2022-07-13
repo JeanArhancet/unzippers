@@ -8,12 +8,11 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-napi = "2.5.0"
-napi-derive = "2.5.0"
-ignore = "0.4.18"
+napi = "2.6.3"
+napi-derive = "2.6.0"
+walkdir = "2.3.2"
 zip = "0.6.2"
-num_cpus = "1.0"
-crossbeam-channel = "0.5"
+
 
 [target.'cfg(all(target_arch = "x86_64", not(target_env = "musl")))'.dependencies]
 mimalloc = {version = "0.1"}

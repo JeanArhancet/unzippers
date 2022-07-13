@@ -27,6 +27,9 @@ test('unzip file without a target', async (t) => {
   const newFooStat = fs.statSync('./resources/foo')
 
   t.is(oldFooStat.mtime !== newFooStat.mtime, true)
+
+  const readContent = fs.readFileSync('./resources/foo')
+  t.deepEqual(readContent.toString(), 'Hello Zippers !')
 })
 
 test('unzip file with a target', async (t) => {
@@ -39,6 +42,8 @@ test('unzip file with a target', async (t) => {
   const newFooStat = fs.statSync('./resources/foo')
 
   t.is(oldFooStat.mtime !== newFooStat.mtime, true)
+  const readContent = fs.readFileSync('./resources/foo')
+  t.deepEqual(readContent.toString(), 'Hello Zippers !')
 })
 
 test.after((t) => {
