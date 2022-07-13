@@ -1,12 +1,9 @@
 #[macro_use]
 extern crate napi_derive;
 use std::fs::File;
-use std::io::{BufReader, Write};
+use std::io::{Read, Write};
 extern crate num_cpus;
-use crossbeam_channel::unbounded;
-use ignore::{WalkBuilder, WalkState::Continue};
 use napi::bindgen_prelude::*;
-use std::cmp::min;
 use std::path::Path;
 use zip::write::FileOptions;
 use zip::{ZipArchive, ZipWriter};
@@ -44,22 +41,13 @@ impl Task for Zip {
         let options = FileOptions::default();
 
         let path = Path::new(&self.entry_path);
+        let mut buffer = Vec::new();
         if path.is_dir() {
-            let (tx, rx) = unbounded();
-            WalkBuilder::new(&self.entry_path)
-                .threads(min(30, num_cpus::get()))
-                .build_parallel()
-                .run(|| {
-                    let tx = tx.clone();
-                    Box::new(move |dir_entry_result| {
-                        if let Ok(dir_entry) = dir_entry_result {
-                            tx.send(dir_entry.path().to_owned()).unwrap();
-                        }
-                        Continue
-                    })
-                });
-            let zip_paths: Vec<_> = rx.try_iter().collect();
-            for zip_path in zip_paths {
+            for entry in walkdir::WalkDir::new(&self.entry_path)
+                .into_iter()
+                .filter_map(|e| e.ok())
+            {
+                let zip_path = entry.path();
                 let name_path = zip_path
                     .strip_prefix(path)
                     .map_err(|e| Error::new(Status::GenericFailure, format!("{}", e)))?;
@@ -76,10 +64,10 @@ impl Task for Zip {
                     self.inner
                         .start_file(name, options)
                         .map_err(|e| Error::new(Status::GenericFailure, format!("{}", e)))?;
-                    let f = File::open(zip_path)?;
-                    let br = BufReader::new(f);
-
-                    self.inner.write_all(&*br.buffer())?
+                    let mut f = File::open(zip_path)?;
+                    f.read_to_end(&mut buffer)?;
+                    self.inner.write_all(&*buffer)?;
+                    buffer.clear();
                 } else if !name.is_empty() {
                     self.inner
                         .add_directory(name, options)
@@ -99,9 +87,10 @@ impl Task for Zip {
             self.inner
                 .start_file(name, options)
                 .map_err(|e| Error::new(Status::GenericFailure, format!("{}", e)))?;
-            let f = File::open(path)?;
-            let br = BufReader::new(f);
-            self.inner.write_all(&*br.buffer())?
+            let mut f = File::open(path)?;
+            f.read_to_end(&mut buffer)?;
+            self.inner.write_all(&*buffer)?;
+            buffer.clear();
         };
         self.inner
             .finish()
