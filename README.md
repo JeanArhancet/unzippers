@@ -28,7 +28,14 @@ export function zip(
 
 ## Performance
 
-### Unzip
+### Hardware
+```
+MacBook Pro (13-inch, M1, 2020)
+Chip Apple M1 
+Memory 8Gb
+```
+### Result
+#### Unzip
 
 ```
 Running "Unzip with file 5.076990127563477 MB" suite...
@@ -46,16 +53,19 @@ Finished 4 cases!
   Slowest: extract-zip with file 5.076990127563477 MB
 ```
 
-### Zip
+#### Zip
 
 ```
-Running "Zip with file 0.00390625 MB" suite...
+Running "Zip with file 0.009429931640625 MB" suite...
 Progress: 100%
-  zippers with file 0.00390625 MB:
-    616 ops/s, ±1.59%     | slowest, 83.75% slower
-  adm-zip with file 0.00390625 MB:
-    3 791 ops/s, ±1.74%   | fastest
+
+  zippers with file 0.009429931640625 MB:
+    8 792 ops/s, ±2.85%   | fastest
+
+  adm-zip with file 0.009429931640625 MB:
+    4 585 ops/s, ±6.55%   | slowest, 47.85% slower
+
 Finished 2 cases!
-  Fastest: adm-zip with file 0.00390625 MB
-  Slowest: zippers with file 0.00390625 MB
+  Fastest: zippers with file 0.009429931640625 MB
+  Slowest: adm-zip with file 0.009429931640625 MB
 ```
