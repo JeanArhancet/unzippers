@@ -10,7 +10,6 @@ crate-type = ["cdylib"]
 [dependencies]
 napi = "2.6.3"
 napi-derive = "2.6.0"
-walkdir = "2.3.2"
 zip = "0.6.2"
 
 

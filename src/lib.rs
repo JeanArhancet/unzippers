@@ -1,8 +1,8 @@
 #[macro_use]
 extern crate napi_derive;
-use std::fs::File;
+use std::fs::{read_dir, File};
 use std::io::{Read, Write};
-extern crate num_cpus;
+
 use napi::bindgen_prelude::*;
 use std::path::Path;
 use zip::write::FileOptions;
@@ -43,10 +43,8 @@ impl Task for Zip {
         let path = Path::new(&self.entry_path);
         let mut buffer = Vec::new();
         if path.is_dir() {
-            for entry in walkdir::WalkDir::new(&self.entry_path)
-                .into_iter()
-                .filter_map(|e| e.ok())
-            {
+            for entry in read_dir(&self.entry_path)? {
+                let entry = entry?;
                 let zip_path = entry.path();
                 let name_path = zip_path
                     .strip_prefix(path)
@@ -138,7 +136,7 @@ pub fn unzip(
     let target = match &options {
         Some(option) => {
             if let Some(dir) = &option.target {
-                std::path::Path::new(dir)
+                Path::new(dir)
             } else {
                 fname.parent().unwrap()
             }
