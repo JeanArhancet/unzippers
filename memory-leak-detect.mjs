@@ -1,6 +1,7 @@
-import chalk from 'chalk'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+
+import chalk from 'chalk'
 import prettyBytes from 'pretty-bytes'
 import { table } from 'table'
 

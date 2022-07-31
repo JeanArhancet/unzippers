@@ -6,7 +6,6 @@ const { platform, arch } = process
 let nativeBinding = null
 let localFileExisted = false
 let loadError = null
-
 function isMusl() {
   // For Node 10
   if (!process.report || typeof process.report.getReport !== 'function') {

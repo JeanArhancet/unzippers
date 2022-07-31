@@ -1,17 +1,22 @@
 {
   "package": "zippers",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Zip library in Node.js",
   "main": "index.js",
+  "repository": "https://github.com/JeanArhancet/zippers",
   "license": "MIT",
   "keywords": [
+    "zippers",
     "napi-rs",
     "Rust",
-    "zip-rs",
     "zip",
     "unzip",
     "archive"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "files": [
     "index.d.ts",
     "index.js"
@@ -64,7 +69,7 @@
   },
   "scripts": {
     "artifacts": "napi artifacts",
-    "bench": "npm run build && node benches/bench.js",
+    "bench": "yarn run build && node benches/bench.js",
     "build": "napi build --platform --release --pipe \"prettier -w\"",
     "build:debug": "napi build --platform --pipe \"prettier -w\"",
     "format": "run-p format:js format:rs",
@@ -73,7 +78,7 @@
     "lint": "run-p lint:js lint:rs",
     "lint:js": "eslint . -c ./.eslintrc.yml",
     "lint:rs": "cargo clippy",
-    "test": "npm run test:js",
+    "test": "run-p test:js",
     "test:js": "cd test && npx ava . && cd ..",
     "test:mem": "node memory-leak-detect.mjs",
     "version": "napi version"
@@ -84,5 +89,6 @@
     "trailingComma": "all",
     "singleQuote": true,
     "arrowParens": "always"
-  }
+  },
+  "packageManager": "yarn@3.2.2"
 }
