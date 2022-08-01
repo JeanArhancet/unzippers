@@ -1,0 +1,32 @@
+{
+  "name": "zippers-linux-arm-gnueabihf",
+  "version": "1.0.0",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm"
+  ],
+  "main": "zippers.linux-arm-gnueabihf.node",
+  "files": [
+    "zippers.linux-arm-gnueabihf.node"
+  ],
+  "description": "Fastest Zip library in Node.js",
+  "license": "MIT",
+  "keywords": [
+    "zippers",
+    "napi-rs",
+    "Rust",
+    "zip",
+    "unzip",
+    "archive"
+  ],
+  "engines": {
+    "node": ">= 10"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": "https://github.com/JeanArhancet/zippers"
+}

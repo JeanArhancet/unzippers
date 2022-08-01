@@ -1,0 +1,32 @@
+{
+  "name": "zippers-win32-x64-msvc",
+  "version": "1.0.0",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "zippers.win32-x64-msvc.node",
+  "files": [
+    "zippers.win32-x64-msvc.node"
+  ],
+  "description": "Fastest Zip library in Node.js",
+  "license": "MIT",
+  "keywords": [
+    "zippers",
+    "napi-rs",
+    "Rust",
+    "zip",
+    "unzip",
+    "archive"
+  ],
+  "engines": {
+    "node": ">= 10"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": "https://github.com/JeanArhancet/zippers"
+}
