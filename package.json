@@ -35,10 +35,10 @@
         "armv7-unknown-linux-gnueabihf",
         "aarch64-apple-darwin",
         "aarch64-linux-android",
+        "arm-linux-androideabi",
         "x86_64-unknown-freebsd",
         "aarch64-unknown-linux-musl",
-        "aarch64-pc-windows-msvc",
-        "armv7-linux-androideabi"
+        "aarch64-pc-windows-msvc"
       ]
     }
   },
@@ -53,6 +53,7 @@
     "ava": "^4.3.0",
     "benny": "^3.7.1",
     "chalk": "^5.0.0",
+    "esbuild": "^0.14.51",
     "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
@@ -78,6 +79,7 @@
     "lint": "run-p lint:js lint:rs",
     "lint:js": "eslint . -c ./.eslintrc.yml",
     "lint:rs": "cargo clippy",
+    "prepublishOnly": "napi prepublish -t npm && esbuild --minify --outfile=index.js --allow-overwrite index.js",
     "test": "run-p test:js",
     "test:js": "cd test && npx ava . && cd ..",
     "test:mem": "node memory-leak-detect.mjs",

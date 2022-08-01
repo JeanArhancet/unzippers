@@ -29,12 +29,15 @@ export function zip(
 ## Performance
 
 ### Hardware
+
 ```
 MacBook Pro (13-inch, M1, 2020)
-Chip Apple M1 
+Chip Apple M1
 Memory 8Gb
 ```
+
 ### Result
+
 #### Unzip
 
 ```

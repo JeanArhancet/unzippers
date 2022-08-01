@@ -487,6 +487,8 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           path: artifacts
+      - name: List artifacts
+        run: ls -r ./artifacts
       - name: Move artifacts
         run: yarn artifacts
       - name: List packages
