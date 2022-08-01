@@ -4,7 +4,7 @@ use std::fs::{read_dir, File};
 use std::io::{Read, Write};
 
 use napi::bindgen_prelude::*;
-use std::path::Path;
+use std::path::{Path, PathBuf};
 use zip::write::FileOptions;
 use zip::{ZipArchive, ZipWriter};
 
@@ -31,6 +31,18 @@ pub struct Zip {
     entry_path: String,
 }
 
+fn visit_dirs(entry_path: &Path, paths: &mut Vec<PathBuf>) -> Result<Vec<PathBuf>> {
+    for entry in read_dir(&entry_path)? {
+        let entry = entry.map_err(|e| Error::new(Status::GenericFailure, format!("{}", e)))?;
+        let path = entry.path();
+        paths.push(path.to_path_buf());
+        if path.is_dir() {
+            visit_dirs(&path, paths);
+        }
+    }
+    Ok(paths.to_vec())
+}
+
 #[napi]
 impl Task for Zip {
     type Output = ();
@@ -41,11 +53,10 @@ impl Task for Zip {
 
         let path = Path::new(&self.entry_path);
         let mut buffer = Vec::new();
+        let mut paths: Vec<PathBuf> = Vec::new();
         if path.is_dir() {
-            for entry in read_dir(&self.entry_path)? {
-                let entry = entry?;
-                let zip_path = entry.path();
-                let name_path = zip_path
+            for entry in visit_dirs(path, &mut paths)? {
+                let name_path = entry
                     .strip_prefix(path)
                     .map_err(|e| Error::new(Status::GenericFailure, format!("{}", e)))?;
                 let name = match name_path.to_str() {
@@ -57,11 +68,11 @@ impl Task for Zip {
                         ))
                     }
                 };
-                if zip_path.is_file() {
+                if entry.is_file() {
                     self.inner
                         .start_file(name, options)
                         .map_err(|e| Error::new(Status::GenericFailure, format!("{}", e)))?;
-                    let mut f = File::open(zip_path)?;
+                    let mut f = File::open(entry)?;
                     f.read_to_end(&mut buffer)?;
                     self.inner.write_all(&*buffer)?;
                     buffer.clear();
