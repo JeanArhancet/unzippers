@@ -1,5 +1,5 @@
 {
-  "name": "zippers-darwin-arm64",
+  "name": "unzippers-darwin-arm64",
   "version": "1.0.0",
   "os": [
     "darwin"
@@ -7,17 +7,16 @@
   "cpu": [
     "arm64"
   ],
-  "main": "zippers.darwin-arm64.node",
+  "main": "unzippers.darwin-arm64.node",
   "files": [
-    "zippers.darwin-arm64.node"
+    "unzippers.darwin-arm64.node"
   ],
-  "description": "Fastest Zip library in Node.js",
+  "description": "Fastest Unzip library in Node.js",
   "license": "MIT",
   "keywords": [
-    "zippers",
+    "unzippers",
     "napi-rs",
     "Rust",
-    "zip",
     "unzip",
     "archive"
   ],
@@ -28,5 +27,5 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "repository": "https://github.com/JeanArhancet/zippers"
+  "repository": "https://github.com/JeanArhancet/unzippers"
 }

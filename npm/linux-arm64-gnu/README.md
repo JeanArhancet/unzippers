@@ -1,3 +1,3 @@
-# `zippers-linux-arm64-gnu`
+# `unzippers-linux-arm64-gnu`
 
-This is the **aarch64-unknown-linux-gnu** binary for `zippers`
+This is the **aarch64-unknown-linux-gnu** binary for `unzippers`

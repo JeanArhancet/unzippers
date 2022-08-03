@@ -1,3 +1,3 @@
-# `zippers-freebsd-x64`
+# `unzippers-freebsd-x64`
 
-This is the **x86_64-unknown-freebsd** binary for `zippers`
+This is the **x86_64-unknown-freebsd** binary for `unzippers`

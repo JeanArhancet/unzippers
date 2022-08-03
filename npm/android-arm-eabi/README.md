@@ -1,3 +1,3 @@
-# `zippers-android-arm-eabi`
+# `unzippers-android-arm-eabi`
 
-This is the **arm-linux-androideabi** binary for `zippers`
+This is the **arm-linux-androideabi** binary for `unzippers`

@@ -1,3 +1,3 @@
-# `zippers-win32-x64-msvc`
+# `unzippers-win32-x64-msvc`
 
-This is the **x86_64-pc-windows-msvc** binary for `zippers`
+This is the **x86_64-pc-windows-msvc** binary for `unzippers`

@@ -1,3 +1,3 @@
-# `zippers-linux-x64-gnu`
+# `unzippers-linux-x64-gnu`
 
-This is the **x86_64-unknown-linux-gnu** binary for `zippers`
+This is the **x86_64-unknown-linux-gnu** binary for `unzippers`

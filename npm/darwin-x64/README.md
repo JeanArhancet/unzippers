@@ -1,3 +1,3 @@
-# `zippers-darwin-x64`
+# `unzippers-darwin-x64`
 
-This is the **x86_64-apple-darwin** binary for `zippers`
+This is the **x86_64-apple-darwin** binary for `unzippers`

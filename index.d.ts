@@ -7,4 +7,3 @@ export interface Options {
   target?: string
 }
 export function unzip(entryPath: string, options?: Options | undefined | null, signal?: AbortSignal | undefined | null): Promise<void>
-export function zip(entryPath: string, options?: Options | undefined | null, signal?: AbortSignal | undefined | null): Promise<void>

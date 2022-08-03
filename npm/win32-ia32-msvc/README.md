@@ -1,3 +1,3 @@
-# `zippers-win32-ia32-msvc`
+# `unzippers-win32-ia32-msvc`
 
-This is the **i686-pc-windows-msvc** binary for `zippers`
+This is the **i686-pc-windows-msvc** binary for `unzippers`
