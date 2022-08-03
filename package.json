@@ -1,25 +1,29 @@
 {
-  "package": "zippers",
-  "version": "0.0.1",
-  "description": "Zip library in Node.js",
+  "package": "unzippers",
+  "version": "1.0.0",
+  "description": "Fastest Unzip library in Node.js",
   "main": "index.js",
+  "repository": "https://github.com/JeanArhancet/unzippers",
   "license": "MIT",
   "keywords": [
+    "unzippers",
     "napi-rs",
     "Rust",
-    "zip-rs",
-    "zip",
     "unzip",
     "archive"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "files": [
     "index.d.ts",
     "index.js"
   ],
   "napi": {
-    "name": "zippers",
+    "name": "unzippers",
     "package": {
-      "name": "zippers"
+      "name": "unzippers"
     },
     "triples": {
       "defaults": true,
@@ -30,10 +34,10 @@
         "armv7-unknown-linux-gnueabihf",
         "aarch64-apple-darwin",
         "aarch64-linux-android",
+        "arm-linux-androideabi",
         "x86_64-unknown-freebsd",
         "aarch64-unknown-linux-musl",
-        "aarch64-pc-windows-msvc",
-        "armv7-linux-androideabi"
+        "aarch64-pc-windows-msvc"
       ]
     }
   },
@@ -48,6 +52,7 @@
     "ava": "^4.3.0",
     "benny": "^3.7.1",
     "chalk": "^5.0.0",
+    "esbuild": "^0.14.51",
     "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
@@ -64,7 +69,7 @@
   },
   "scripts": {
     "artifacts": "napi artifacts",
-    "bench": "npm run build && node benches/bench.js",
+    "bench": "yarn run build && node benches/bench.js",
     "build": "napi build --platform --release --pipe \"prettier -w\"",
     "build:debug": "napi build --platform --pipe \"prettier -w\"",
     "format": "run-p format:js format:rs",
@@ -73,7 +78,8 @@
     "lint": "run-p lint:js lint:rs",
     "lint:js": "eslint . -c ./.eslintrc.yml",
     "lint:rs": "cargo clippy",
-    "test": "npm run test:js",
+    "prepublishOnly": "napi prepublish -t npm && esbuild --minify --outfile=index.js --allow-overwrite index.js",
+    "test": "run-p test:js",
     "test:js": "cd test && npx ava . && cd ..",
     "test:mem": "node memory-leak-detect.mjs",
     "version": "napi version"
@@ -84,5 +90,6 @@
     "trailingComma": "all",
     "singleQuote": true,
     "arrowParens": "always"
-  }
+  },
+  "packageManager": "yarn@3.2.2"
 }

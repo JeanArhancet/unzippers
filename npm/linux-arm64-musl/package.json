@@ -1,0 +1,31 @@
+{
+  "name": "unzippers-linux-arm64-musl",
+  "version": "1.0.0",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "unzippers.linux-arm64-musl.node",
+  "files": [
+    "unzippers.linux-arm64-musl.node"
+  ],
+  "description": "Fastest Unzip library in Node.js",
+  "license": "MIT",
+  "keywords": [
+    "unzippers",
+    "napi-rs",
+    "Rust",
+    "unzip",
+    "archive"
+  ],
+  "engines": {
+    "node": ">= 10"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": "https://github.com/JeanArhancet/unzippers"
+}

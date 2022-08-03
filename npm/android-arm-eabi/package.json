@@ -1,0 +1,31 @@
+{
+  "name": "unzippers-android-arm-eabi",
+  "version": "1.0.0",
+  "os": [
+    "android"
+  ],
+  "cpu": [
+    "arm"
+  ],
+  "main": "unzippers.android-arm-eabi.node",
+  "files": [
+    "unzippers.android-arm-eabi.node"
+  ],
+  "description": "Fastest Unzip library in Node.js",
+  "license": "MIT",
+  "keywords": [
+    "unzippers",
+    "napi-rs",
+    "Rust",
+    "unzip",
+    "archive"
+  ],
+  "engines": {
+    "node": ">= 10"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": "https://github.com/JeanArhancet/unzippers"
+}

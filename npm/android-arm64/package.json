@@ -1,0 +1,31 @@
+{
+  "name": "unzippers-android-arm64",
+  "version": "1.0.0",
+  "os": [
+    "android"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "unzippers.android-arm64.node",
+  "files": [
+    "unzippers.android-arm64.node"
+  ],
+  "description": "Fastest Unzip library in Node.js",
+  "license": "MIT",
+  "keywords": [
+    "unzippers",
+    "napi-rs",
+    "Rust",
+    "unzip",
+    "archive"
+  ],
+  "engines": {
+    "node": ">= 10"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": "https://github.com/JeanArhancet/unzippers"
+}

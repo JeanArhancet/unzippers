@@ -17,7 +17,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: 14
 
       - name: Install
         uses: actions-rs/toolchain@v1
@@ -28,10 +28,10 @@ jobs:
           components: rustfmt, clippy
 
       - name: 'Install dependencies'
-        run: npm install
+        run: yarn install
 
       - name: 'Build binary'
-        run: npm run build
+        run: yarn run build
 
-      - name: 'Zippers test'
-        run: npm run test
+      - name: 'unzippers test'
+        run: yarn run test
