@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "name": "unzip-rs-darwin-arm64",
   "version": "1.0.0",
+=======
+  "name": "unzippers-darwin-arm64",
+  "version": "1.0.2",
+>>>>>>> f46bb05 (feat: publish)
   "os": [
     "darwin"
   ],
