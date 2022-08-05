@@ -1,5 +1,5 @@
 {
-  "name": "unziprs-win32-x64-msvc",
+  "name": "@jeanarhancet/unzippers-win32-x64-msvc",
   "version": "1.0.0",
   "os": [
     "win32"

@@ -1,5 +1,5 @@
 {
-  "name": "unziprs",
+  "name": "unzippers",
   "version": "1.0.0",
   "description": "Fastest Unzip library in Node.js",
   "main": "index.js",
@@ -21,7 +21,10 @@
     "index.js"
   ],
   "napi": {
-    "name": "unziprs",
+    "name": "unzippers",
+    "package": {
+      "name": "@jeanarhancet/unzippers"
+    },
     "triples": {
       "defaults": true,
       "additional": [

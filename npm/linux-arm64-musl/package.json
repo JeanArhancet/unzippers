@@ -1,5 +1,5 @@
 {
-  "name": "unziprs-linux-arm64-musl",
+  "name": "@jeanarhancet/unzippers-linux-arm64-musl",
   "version": "1.0.0",
   "os": [
     "linux"

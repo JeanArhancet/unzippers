@@ -1,5 +1,5 @@
 {
-  "name": "unziprs-linux-arm-gnueabihf",
+  "name": "@jeanarhancet/unzippers-linux-arm-gnueabihf",
   "version": "1.0.0",
   "os": [
     "linux"
