@@ -1,6 +1,6 @@
 # unzippers
 
-Unzip library in NodeJS, powered by [napi-rs](https://napi.rs) and [zip-rs](https://github.com/zip-rs/zip).
+Fastest Unzip library in NodeJS, powered by [napi-rs](https://napi.rs) and [zip-rs](https://github.com/zip-rs/zip).
 
 ## Install this package
 
@@ -21,6 +21,18 @@ export function unzip(
 ): Promise<void>
 ```
 
+## Usage
+
+```js
+const { unzip } = require('@jeanarhancet/unzippers')
+
+async function main (){}
+  await unzip('./foo.zip', { target: './resources' })
+}
+
+main()
+```
+
 ## Performance
 
 ### Hardware
@@ -32,8 +44,6 @@ Memory 8Gb
 ```
 
 ### Result
-
-#### Unzip
 
 ```
 Running "Unzip with file 5.076990127563477 MB" suite...

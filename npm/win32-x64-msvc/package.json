@@ -1,6 +1,6 @@
 {
-  "name": "unzippers-win32-x64-msvc",
-  "version": "1.0.2",
+  "name": "@jeanarhancet/unzippers-win32-x64-msvc",
+  "version": "1.0.0",
   "os": [
     "win32"
   ],

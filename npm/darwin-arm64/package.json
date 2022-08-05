@@ -1,6 +1,6 @@
 {
-  "name": "unzippers-darwin-arm64",
-  "version": "1.0.2",
+  "name": "@jeanarhancet/unzippers-darwin-arm64",
+  "version": "1.0.0",
   "os": [
     "darwin"
   ],

@@ -1,6 +1,6 @@
 {
-  "name": "unzippers-freebsd-x64",
-  "version": "1.0.2",
+  "name": "@jeanarhancet/unzippers-freebsd-x64",
+  "version": "1.0.0",
   "os": [
     "freebsd"
   ],

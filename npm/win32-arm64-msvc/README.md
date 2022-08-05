@@ -1,3 +1,3 @@
-# `unzippers-win32-arm64-msvc`
+# `@jeanarhancet/unzippers-win32-arm64-msvc`
 
-This is the **aarch64-pc-windows-msvc** binary for `unzippers`
+This is the **aarch64-pc-windows-msvc** binary for `@jeanarhancet/unzippers`
