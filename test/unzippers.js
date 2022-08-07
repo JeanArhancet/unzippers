@@ -3,20 +3,20 @@ const path = require('path')
 
 const test = require('ava')
 
-const unziprs = require('../index')
+const unzippers = require('../index')
 
 test('unzip file with target', async (t) => {
-  await unziprs.unzip('./resources/foo.zip', { target: './resources' })
+  await unzippers.unzip('./resources/foo.zip', { target: './resources' })
 
   const readContent = fs.readFileSync('./resources/foo')
-  t.deepEqual(readContent.toString(), 'Hello unziprs !')
+  t.deepEqual(readContent.toString(), 'Hello unzippers !')
 })
 
 test('unzip file without target', async (t) => {
-  await unziprs.unzip('./resources/foo.zip')
+  await unzippers.unzip('./resources/foo.zip')
 
   const readContent = fs.readFileSync('./resources/foo')
-  t.deepEqual(readContent.toString(), 'Hello unziprs !')
+  t.deepEqual(readContent.toString(), 'Hello unzippers !')
 })
 
 test.after((t) => {

@@ -25,24 +25,24 @@ switch (platform) {
   case 'android':
     switch (arch) {
       case 'arm64':
-        localFileExisted = existsSync(join(__dirname, 'unziprs.android-arm64.node'))
+        localFileExisted = existsSync(join(__dirname, 'unzippers.android-arm64.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./unziprs.android-arm64.node')
+            nativeBinding = require('./unzippers.android-arm64.node')
           } else {
-            nativeBinding = require('unziprs-android-arm64')
+            nativeBinding = require('@jarhancet/unzippers-android-arm64')
           }
         } catch (e) {
           loadError = e
         }
         break
       case 'arm':
-        localFileExisted = existsSync(join(__dirname, 'unziprs.android-arm-eabi.node'))
+        localFileExisted = existsSync(join(__dirname, 'unzippers.android-arm-eabi.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./unziprs.android-arm-eabi.node')
+            nativeBinding = require('./unzippers.android-arm-eabi.node')
           } else {
-            nativeBinding = require('unziprs-android-arm-eabi')
+            nativeBinding = require('@jarhancet/unzippers-android-arm-eabi')
           }
         } catch (e) {
           loadError = e
@@ -55,36 +55,36 @@ switch (platform) {
   case 'win32':
     switch (arch) {
       case 'x64':
-        localFileExisted = existsSync(join(__dirname, 'unziprs.win32-x64-msvc.node'))
+        localFileExisted = existsSync(join(__dirname, 'unzippers.win32-x64-msvc.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./unziprs.win32-x64-msvc.node')
+            nativeBinding = require('./unzippers.win32-x64-msvc.node')
           } else {
-            nativeBinding = require('unziprs-win32-x64-msvc')
+            nativeBinding = require('@jarhancet/unzippers-win32-x64-msvc')
           }
         } catch (e) {
           loadError = e
         }
         break
       case 'ia32':
-        localFileExisted = existsSync(join(__dirname, 'unziprs.win32-ia32-msvc.node'))
+        localFileExisted = existsSync(join(__dirname, 'unzippers.win32-ia32-msvc.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./unziprs.win32-ia32-msvc.node')
+            nativeBinding = require('./unzippers.win32-ia32-msvc.node')
           } else {
-            nativeBinding = require('unziprs-win32-ia32-msvc')
+            nativeBinding = require('@jarhancet/unzippers-win32-ia32-msvc')
           }
         } catch (e) {
           loadError = e
         }
         break
       case 'arm64':
-        localFileExisted = existsSync(join(__dirname, 'unziprs.win32-arm64-msvc.node'))
+        localFileExisted = existsSync(join(__dirname, 'unzippers.win32-arm64-msvc.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./unziprs.win32-arm64-msvc.node')
+            nativeBinding = require('./unzippers.win32-arm64-msvc.node')
           } else {
-            nativeBinding = require('unziprs-win32-arm64-msvc')
+            nativeBinding = require('@jarhancet/unzippers-win32-arm64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -97,24 +97,24 @@ switch (platform) {
   case 'darwin':
     switch (arch) {
       case 'x64':
-        localFileExisted = existsSync(join(__dirname, 'unziprs.darwin-x64.node'))
+        localFileExisted = existsSync(join(__dirname, 'unzippers.darwin-x64.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./unziprs.darwin-x64.node')
+            nativeBinding = require('./unzippers.darwin-x64.node')
           } else {
-            nativeBinding = require('unziprs-darwin-x64')
+            nativeBinding = require('@jarhancet/unzippers-darwin-x64')
           }
         } catch (e) {
           loadError = e
         }
         break
       case 'arm64':
-        localFileExisted = existsSync(join(__dirname, 'unziprs.darwin-arm64.node'))
+        localFileExisted = existsSync(join(__dirname, 'unzippers.darwin-arm64.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./unziprs.darwin-arm64.node')
+            nativeBinding = require('./unzippers.darwin-arm64.node')
           } else {
-            nativeBinding = require('unziprs-darwin-arm64')
+            nativeBinding = require('@jarhancet/unzippers-darwin-arm64')
           }
         } catch (e) {
           loadError = e
@@ -128,12 +128,12 @@ switch (platform) {
     if (arch !== 'x64') {
       throw new Error(`Unsupported architecture on FreeBSD: ${arch}`)
     }
-    localFileExisted = existsSync(join(__dirname, 'unziprs.freebsd-x64.node'))
+    localFileExisted = existsSync(join(__dirname, 'unzippers.freebsd-x64.node'))
     try {
       if (localFileExisted) {
-        nativeBinding = require('./unziprs.freebsd-x64.node')
+        nativeBinding = require('./unzippers.freebsd-x64.node')
       } else {
-        nativeBinding = require('unziprs-freebsd-x64')
+        nativeBinding = require('@jarhancet/unzippers-freebsd-x64')
       }
     } catch (e) {
       loadError = e
@@ -143,23 +143,23 @@ switch (platform) {
     switch (arch) {
       case 'x64':
         if (isMusl()) {
-          localFileExisted = existsSync(join(__dirname, 'unziprs.linux-x64-musl.node'))
+          localFileExisted = existsSync(join(__dirname, 'unzippers.linux-x64-musl.node'))
           try {
             if (localFileExisted) {
-              nativeBinding = require('./unziprs.linux-x64-musl.node')
+              nativeBinding = require('./unzippers.linux-x64-musl.node')
             } else {
-              nativeBinding = require('unziprs-linux-x64-musl')
+              nativeBinding = require('@jarhancet/unzippers-linux-x64-musl')
             }
           } catch (e) {
             loadError = e
           }
         } else {
-          localFileExisted = existsSync(join(__dirname, 'unziprs.linux-x64-gnu.node'))
+          localFileExisted = existsSync(join(__dirname, 'unzippers.linux-x64-gnu.node'))
           try {
             if (localFileExisted) {
-              nativeBinding = require('./unziprs.linux-x64-gnu.node')
+              nativeBinding = require('./unzippers.linux-x64-gnu.node')
             } else {
-              nativeBinding = require('unziprs-linux-x64-gnu')
+              nativeBinding = require('@jarhancet/unzippers-linux-x64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -168,23 +168,23 @@ switch (platform) {
         break
       case 'arm64':
         if (isMusl()) {
-          localFileExisted = existsSync(join(__dirname, 'unziprs.linux-arm64-musl.node'))
+          localFileExisted = existsSync(join(__dirname, 'unzippers.linux-arm64-musl.node'))
           try {
             if (localFileExisted) {
-              nativeBinding = require('./unziprs.linux-arm64-musl.node')
+              nativeBinding = require('./unzippers.linux-arm64-musl.node')
             } else {
-              nativeBinding = require('unziprs-linux-arm64-musl')
+              nativeBinding = require('@jarhancet/unzippers-linux-arm64-musl')
             }
           } catch (e) {
             loadError = e
           }
         } else {
-          localFileExisted = existsSync(join(__dirname, 'unziprs.linux-arm64-gnu.node'))
+          localFileExisted = existsSync(join(__dirname, 'unzippers.linux-arm64-gnu.node'))
           try {
             if (localFileExisted) {
-              nativeBinding = require('./unziprs.linux-arm64-gnu.node')
+              nativeBinding = require('./unzippers.linux-arm64-gnu.node')
             } else {
-              nativeBinding = require('unziprs-linux-arm64-gnu')
+              nativeBinding = require('@jarhancet/unzippers-linux-arm64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -192,12 +192,12 @@ switch (platform) {
         }
         break
       case 'arm':
-        localFileExisted = existsSync(join(__dirname, 'unziprs.linux-arm-gnueabihf.node'))
+        localFileExisted = existsSync(join(__dirname, 'unzippers.linux-arm-gnueabihf.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./unziprs.linux-arm-gnueabihf.node')
+            nativeBinding = require('./unzippers.linux-arm-gnueabihf.node')
           } else {
-            nativeBinding = require('unziprs-linux-arm-gnueabihf')
+            nativeBinding = require('@jarhancet/unzippers-linux-arm-gnueabihf')
           }
         } catch (e) {
           loadError = e

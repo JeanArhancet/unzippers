@@ -1,11 +1,11 @@
-# unziprs
+# Unzippers
 
 Fastest Unzip library in NodeJS, powered by [napi-rs](https://napi.rs) and [zip-rs](https://github.com/zip-rs/zip).
 
 ## Install this package
 
 ```
-npm install unziprs
+yarn install @jarhancet/unzippers
 ```
 
 ## API
@@ -24,15 +24,8 @@ export function unzip(
 ## Usage
 
 ```js
-<<<<<<< HEAD
-<<<<<<< HEAD
-const { unzip } = require('unziprs')
-=======
-const { unzip } = require('@jeanarhancet/unzippers')
->>>>>>> c4345c6 (Trigger github)
-=======
-const { unzip } = require('unziprs')
->>>>>>> ad65bfc (refactor: rename to unzip-rs)
+const { unzip } = require('@jarhancet/unzippers')
+
 
 async function main (){}
   await unzip('./foo.zip', { target: './resources' })
@@ -60,11 +53,11 @@ Progress: 100%
     0.4 ops/s, ±1.35%   | slowest, 85.71% slower
   node-stream-zip with file 5.076990127563477 MB:
     1.1 ops/s, ±2.88%   | 60.71% slower
-  unziprs with file 5.076990127563477 MB:
+  unzippers with file 5.076990127563477 MB:
     2.8 ops/s, ±0.63%   | fastest
   adm-zip with file 5.076990127563477 MB:
     1.2 ops/s, ±3.12%   | 57.14% slower
 Finished 4 cases!
-  Fastest: unziprs with file 5.076990127563477 MB
+  Fastest: unzippers with file 5.076990127563477 MB
   Slowest: extract-zip with file 5.076990127563477 MB
 ```

@@ -1,3 +1,3 @@
-# `unziprs-win32-x64-msvc`
+# `@jarhancet/unzippers-win32-x64-msvc`
 
-This is the **x86_64-pc-windows-msvc** binary for `unziprs`
+This is the **x86_64-pc-windows-msvc** binary for `@jarhancet/unzippers`

@@ -1,5 +1,5 @@
 {
-  "name": "unziprs-linux-arm-gnueabihf",
+  "name": "@jarhancet/unzippers-linux-arm-gnueabihf",
   "version": "1.0.0",
   "os": [
     "linux"
@@ -7,14 +7,14 @@
   "cpu": [
     "arm"
   ],
-  "main": "unziprs.linux-arm-gnueabihf.node",
+  "main": "unzippers.linux-arm-gnueabihf.node",
   "files": [
-    "unziprs.linux-arm-gnueabihf.node"
+    "unzippers.linux-arm-gnueabihf.node"
   ],
   "description": "Fastest Unzip library in Node.js",
   "license": "MIT",
   "keywords": [
-    "unziprs",
+    "unzippers",
     "napi-rs",
     "Rust",
     "unzip",
@@ -27,5 +27,5 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "repository": "https://github.com/JeanArhancet/unzip-rs"
+  "repository": "https://github.com/JeanArhancet/unzippers"
 }
