@@ -1,12 +1,12 @@
 {
-  "package": "unzippers",
+  "name": "unziprs",
   "version": "1.0.0",
   "description": "Fastest Unzip library in Node.js",
   "main": "index.js",
-  "repository": "https://github.com/JeanArhancet/unzippers",
+  "repository": "https://github.com/JeanArhancet/unzip-rs",
   "license": "MIT",
   "keywords": [
-    "unzippers",
+    "unziprs",
     "napi-rs",
     "Rust",
     "unzip",
@@ -21,10 +21,7 @@
     "index.js"
   ],
   "napi": {
-    "name": "unzippers",
-    "package": {
-      "name": "unzippers"
-    },
+    "name": "unziprs",
     "triples": {
       "defaults": true,
       "additional": [

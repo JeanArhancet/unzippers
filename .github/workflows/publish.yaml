@@ -1,7 +1,7 @@
 name: publish
 env:
   DEBUG: napi:*
-  APP_NAME: unzippers
+  APP_NAME: unziprs
   MACOSX_DEPLOYMENT_TARGET: '10.13'
 'on':
   push:

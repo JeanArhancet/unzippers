@@ -1,3 +1,3 @@
-# `unzippers-android-arm64`
+# `unziprs-android-arm64`
 
-This is the **aarch64-linux-android** binary for `unzippers`
+This is the **aarch64-linux-android** binary for `unziprs`

@@ -1,5 +1,5 @@
 [package]
-name = "unzippers"
+name = "unziprs"
 authors = ["Jean Arhancet"]
 version = "0.1.0"
 edition = "2021"

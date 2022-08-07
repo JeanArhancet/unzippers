@@ -1,5 +1,5 @@
 {
-  "name": "unzippers-freebsd-x64",
+  "name": "unzip-rs-freebsd-x64",
   "version": "1.0.0",
   "os": [
     "freebsd"
@@ -7,14 +7,14 @@
   "cpu": [
     "x64"
   ],
-  "main": "unzippers.freebsd-x64.node",
+  "main": "unzip-rs.freebsd-x64.node",
   "files": [
-    "unzippers.freebsd-x64.node"
+    "unzip-rs.freebsd-x64.node"
   ],
   "description": "Fastest Unzip library in Node.js",
   "license": "MIT",
   "keywords": [
-    "unzippers",
+    "unzip-rs",
     "napi-rs",
     "Rust",
     "unzip",
@@ -27,5 +27,5 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "repository": "https://github.com/JeanArhancet/unzippers"
+  "repository": "https://github.com/JeanArhancet/unzip-rs"
 }
