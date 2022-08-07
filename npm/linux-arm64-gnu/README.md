@@ -1,3 +1,3 @@
-# `@jeanarhancet/unzippers-linux-arm64-gnu`
+# `unziprs-linux-arm64-gnu`
 
-This is the **aarch64-unknown-linux-gnu** binary for `@jeanarhancet/unzippers`
+This is the **aarch64-unknown-linux-gnu** binary for `unziprs`

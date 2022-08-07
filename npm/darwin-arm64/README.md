@@ -1,3 +1,3 @@
-# `@jeanarhancet/unzippers-darwin-arm64`
+# `unziprs-darwin-arm64`
 
-This is the **aarch64-apple-darwin** binary for `@jeanarhancet/unzippers`
+This is the **aarch64-apple-darwin** binary for `unziprs`

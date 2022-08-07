@@ -33,5 +33,5 @@ jobs:
       - name: 'Build binary'
         run: yarn run build
 
-      - name: 'unzippers test'
+      - name: 'unziprs test'
         run: yarn run test
