@@ -1,3 +1,3 @@
-# `@jeanarhancet/unzippers-linux-arm-gnueabihf`
+# `unziprs-linux-arm-gnueabihf`
 
-This is the **armv7-unknown-linux-gnueabihf** binary for `@jeanarhancet/unzippers`
+This is the **armv7-unknown-linux-gnueabihf** binary for `unziprs`

@@ -1,5 +1,5 @@
 {
-  "name": "@jeanarhancet/unzippers-android-arm-eabi",
+  "name": "unziprs-android-arm-eabi",
   "version": "1.0.0",
   "os": [
     "android"

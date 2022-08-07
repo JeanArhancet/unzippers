@@ -1,16 +1,6 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
   "name": "unziprs-win32-arm64-msvc",
   "version": "1.0.0",
-=======
-  "name": "unzippers-win32-arm64-msvc",
-  "version": "1.0.2",
->>>>>>> f46bb05 (feat: publish)
-=======
-  "name": "@jeanarhancet/unzippers-win32-arm64-msvc",
-  "version": "1.0.0",
->>>>>>> c4345c6 (Trigger github)
   "os": [
     "win32"
   ],

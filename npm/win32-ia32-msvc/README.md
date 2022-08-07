@@ -1,3 +1,3 @@
-# `@jeanarhancet/unzippers-win32-ia32-msvc`
+# `unziprs-win32-ia32-msvc`
 
-This is the **i686-pc-windows-msvc** binary for `@jeanarhancet/unzippers`
+This is the **i686-pc-windows-msvc** binary for `unziprs`

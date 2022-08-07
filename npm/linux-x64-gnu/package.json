@@ -1,5 +1,5 @@
 {
-  "name": "@jeanarhancet/unzippers-linux-x64-gnu",
+  "name": "unziprs-linux-x64-gnu",
   "version": "1.0.0",
   "os": [
     "linux"

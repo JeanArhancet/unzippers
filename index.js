@@ -30,7 +30,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./unziprs.android-arm64.node')
           } else {
-            nativeBinding = require('@jeanarhancet/unzippers-android-arm64')
+            nativeBinding = require('unziprs-android-arm64')
           }
         } catch (e) {
           loadError = e
@@ -42,7 +42,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./unziprs.android-arm-eabi.node')
           } else {
-            nativeBinding = require('@jeanarhancet/unzippers-android-arm-eabi')
+            nativeBinding = require('unziprs-android-arm-eabi')
           }
         } catch (e) {
           loadError = e
@@ -60,7 +60,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./unziprs.win32-x64-msvc.node')
           } else {
-            nativeBinding = require('@jeanarhancet/unzippers-win32-x64-msvc')
+            nativeBinding = require('unziprs-win32-x64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -72,7 +72,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./unziprs.win32-ia32-msvc.node')
           } else {
-            nativeBinding = require('@jeanarhancet/unzippers-win32-ia32-msvc')
+            nativeBinding = require('unziprs-win32-ia32-msvc')
           }
         } catch (e) {
           loadError = e
@@ -84,7 +84,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./unziprs.win32-arm64-msvc.node')
           } else {
-            nativeBinding = require('@jeanarhancet/unzippers-win32-arm64-msvc')
+            nativeBinding = require('unziprs-win32-arm64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -102,7 +102,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./unziprs.darwin-x64.node')
           } else {
-            nativeBinding = require('@jeanarhancet/unzippers-darwin-x64')
+            nativeBinding = require('unziprs-darwin-x64')
           }
         } catch (e) {
           loadError = e
@@ -114,7 +114,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./unziprs.darwin-arm64.node')
           } else {
-            nativeBinding = require('@jeanarhancet/unzippers-darwin-arm64')
+            nativeBinding = require('unziprs-darwin-arm64')
           }
         } catch (e) {
           loadError = e
@@ -133,7 +133,7 @@ switch (platform) {
       if (localFileExisted) {
         nativeBinding = require('./unziprs.freebsd-x64.node')
       } else {
-        nativeBinding = require('@jeanarhancet/unzippers-freebsd-x64')
+        nativeBinding = require('unziprs-freebsd-x64')
       }
     } catch (e) {
       loadError = e
@@ -148,7 +148,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./unziprs.linux-x64-musl.node')
             } else {
-              nativeBinding = require('@jeanarhancet/unzippers-linux-x64-musl')
+              nativeBinding = require('unziprs-linux-x64-musl')
             }
           } catch (e) {
             loadError = e
@@ -159,7 +159,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./unziprs.linux-x64-gnu.node')
             } else {
-              nativeBinding = require('@jeanarhancet/unzippers-linux-x64-gnu')
+              nativeBinding = require('unziprs-linux-x64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -173,7 +173,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./unziprs.linux-arm64-musl.node')
             } else {
-              nativeBinding = require('@jeanarhancet/unzippers-linux-arm64-musl')
+              nativeBinding = require('unziprs-linux-arm64-musl')
             }
           } catch (e) {
             loadError = e
@@ -184,7 +184,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./unziprs.linux-arm64-gnu.node')
             } else {
-              nativeBinding = require('@jeanarhancet/unzippers-linux-arm64-gnu')
+              nativeBinding = require('unziprs-linux-arm64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -197,7 +197,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./unziprs.linux-arm-gnueabihf.node')
           } else {
-            nativeBinding = require('@jeanarhancet/unzippers-linux-arm-gnueabihf')
+            nativeBinding = require('unziprs-linux-arm-gnueabihf')
           }
         } catch (e) {
           loadError = e

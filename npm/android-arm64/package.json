@@ -1,5 +1,5 @@
 {
-  "name": "@jeanarhancet/unzippers-android-arm64",
+  "name": "unziprs-android-arm64",
   "version": "1.0.0",
   "os": [
     "android"

@@ -25,10 +25,14 @@ export function unzip(
 
 ```js
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { unzip } = require('unziprs')
 =======
 const { unzip } = require('@jeanarhancet/unzippers')
 >>>>>>> c4345c6 (Trigger github)
+=======
+const { unzip } = require('unziprs')
+>>>>>>> ad65bfc (refactor: rename to unzip-rs)
 
 async function main (){}
   await unzip('./foo.zip', { target: './resources' })
