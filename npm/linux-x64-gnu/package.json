@@ -1,6 +1,6 @@
 {
-  "name": "@jarhancet/unzippers-linux-x64-gnu",
-  "version": "1.0.0",
+  "name": "@jeanarhancet/unzippers-linux-x64-gnu",
+  "version": "1.0.1",
   "os": [
     "linux"
   ],

@@ -1,3 +1,3 @@
-# `@jarhancet/unzippers-darwin-x64`
+# `@jeanarhancet/unzippers-darwin-x64`
 
-This is the **x86_64-apple-darwin** binary for `@jarhancet/unzippers`
+This is the **x86_64-apple-darwin** binary for `@jeanarhancet/unzippers`

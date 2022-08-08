@@ -1,3 +1,3 @@
-# `@jarhancet/unzippers-android-arm64`
+# `@jeanarhancet/unzippers-android-arm64`
 
-This is the **aarch64-linux-android** binary for `@jarhancet/unzippers`
+This is the **aarch64-linux-android** binary for `@jeanarhancet/unzippers`

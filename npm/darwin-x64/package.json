@@ -1,6 +1,6 @@
 {
-  "name": "@jarhancet/unzippers-darwin-x64",
-  "version": "1.0.0",
+  "name": "@jeanarhancet/unzippers-darwin-x64",
+  "version": "1.0.1",
   "os": [
     "darwin"
   ],

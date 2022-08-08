@@ -5,7 +5,7 @@ Fastest Unzip library in NodeJS, powered by [napi-rs](https://napi.rs) and [zip-
 ## Install this package
 
 ```
-yarn install @jarhancet/unzippers
+yarn add @jeanarhancet/unzippers
 ```
 
 ## API
@@ -24,7 +24,7 @@ export function unzip(
 ## Usage
 
 ```js
-const { unzip } = require('@jarhancet/unzippers')
+const { unzip } = require('@jeanarhancet/unzippers')
 
 
 async function main (){}
