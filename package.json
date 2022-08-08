@@ -91,5 +91,8 @@
     "singleQuote": true,
     "arrowParens": "always"
   },
-  "packageManager": "yarn@3.2.2"
+  "packageManager": "yarn@3.2.2",
+  "dependencies": {
+    "@jeanarhancet/unzippers": "^1.0.1"
+  }
 }
