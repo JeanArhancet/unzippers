@@ -1,3 +1,3 @@
-# `unziprs-freebsd-x64`
+# `@jeanarhancet/unzippers-freebsd-x64`
 
-This is the **x86_64-unknown-freebsd** binary for `unziprs`
+This is the **x86_64-unknown-freebsd** binary for `@jeanarhancet/unzippers`

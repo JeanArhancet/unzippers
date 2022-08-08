@@ -1,3 +1,3 @@
-# `unziprs-android-arm-eabi`
+# `@jeanarhancet/unzippers-android-arm-eabi`
 
-This is the **arm-linux-androideabi** binary for `unziprs`
+This is the **arm-linux-androideabi** binary for `@jeanarhancet/unzippers`

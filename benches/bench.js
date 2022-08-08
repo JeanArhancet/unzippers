@@ -7,7 +7,7 @@ const extract = require('extract-zip')
 const glob = require('glob')
 const StreamZip = require('node-stream-zip')
 
-const unziprs = require('../index')
+const unzippers = require('../index')
 
 const filesToUnzip = function () {
   return new Promise((resolve, reject) => {
@@ -33,8 +33,8 @@ async function unzip() {
         await zip.extract(null, __dirname)
         await zip.close()
       }),
-      add(`unziprs with file ${fileSizeInMegabytes} MB`, async () => {
-        await unziprs.unzip(file)
+      add(`unzippers with file ${fileSizeInMegabytes} MB`, async () => {
+        await unzippers.unzip(file)
       }),
       add(`adm-zip with file ${fileSizeInMegabytes} MB`, async () => {
         // reading archives

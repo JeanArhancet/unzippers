@@ -1,3 +1,3 @@
-# `unziprs-linux-x64-musl`
+# `@jeanarhancet/unzippers-linux-x64-musl`
 
-This is the **x86_64-unknown-linux-musl** binary for `unziprs`
+This is the **x86_64-unknown-linux-musl** binary for `@jeanarhancet/unzippers`

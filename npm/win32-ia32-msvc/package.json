@@ -1,20 +1,20 @@
 {
-  "name": "unzip-rs-win32-ia32-msvc",
-  "version": "1.0.0",
+  "name": "@jeanarhancet/unzippers-win32-ia32-msvc",
+  "version": "1.0.2",
   "os": [
     "win32"
   ],
   "cpu": [
     "ia32"
   ],
-  "main": "unzip-rs.win32-ia32-msvc.node",
+  "main": "unzippers.win32-ia32-msvc.node",
   "files": [
-    "unzip-rs.win32-ia32-msvc.node"
+    "unzippers.win32-ia32-msvc.node"
   ],
   "description": "Fastest Unzip library in Node.js",
   "license": "MIT",
   "keywords": [
-    "unzip-rs",
+    "unzippers",
     "napi-rs",
     "Rust",
     "unzip",
@@ -27,5 +27,5 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "repository": "https://github.com/JeanArhancet/unzip-rs"
+  "repository": "https://github.com/JeanArhancet/unzippers"
 }
